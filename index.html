@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#140b22">
+  <title>Happy Birthday, Shiro ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Cinematic intro -->
+  <div id="intro" aria-hidden="true">
+    <div class="intro-stars"></div>
+    <div class="intro-orb"></div>
+    <div class="intro-content">
+      <span class="eyebrow">A little surprise for you</span>
+      <div id="countdown">3</div>
+      <p>Get ready for something special ✨</p>
+      <div class="loading-line"><span></span></div>
+    </div>
+  </div>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="ambient ambient-three"></div>
+  <div class="grain"></div>
+
+  <main id="website">
+    <section class="hero section">
+      <div class="hero-badge">✦ MADE WITH LOVE ✦</div>
+
+      <div class="glass-card hero-card">
+        <p class="eyebrow">Today is your day</p>
+        <h1>Happy Birthday</h1>
+        <h2>Shiro <span>❤️</span></h2>
+        <p class="hero-copy">
+          A tiny digital surprise filled with memories, smiles, and a whole lot of love.
+          Take a deep breath, make a wish, and open your present.
+        </p>
+
+        <div class="gift-stage">
+          <div class="gift-shadow"></div>
+          <button class="gift" id="gift" aria-label="Open birthday gift">
+            <span class="gift-aura"></span>
+            <span class="gift-rays"></span>
+            <span class="gift-lid">
+              <span class="bow bow-left"></span>
+              <span class="bow bow-right"></span>
+              <span class="bow-center"></span>
+            </span>
+            <span class="gift-box">
+              <span class="ribbon ribbon-v"></span>
+              <span class="ribbon ribbon-h"></span>
+              <span class="box-highlight"></span>
+            </span>
+            <span class="gift-lid-shine"></span>
+          </button>
+        </div>
+
+        <button class="primary-btn" id="openGift">
+          <span>🎁</span> Open your gift
+        </button>
+
+        <p class="hint">Tap the box or the button</p>
+      </div>
+    </section>
+
+    <section id="surprise" class="section surprise-section hidden">
+      <div class="glass-card surprise-card">
+        <div class="section-heading">
+          <span class="eyebrow">YOUR SPECIAL MESSAGE</span>
+          <h2>For you, with love 💌</h2>
+        </div>
+
+        <div class="letter-card">
+          <div class="letter-decoration">✦</div>
+          <p id="typing"></p>
+          <div class="signature">— With all my love ❤️</div>
+        </div>
+
+        <div class="divider"><span>♥</span></div>
+
+        <div class="section-heading gallery-heading">
+          <span class="eyebrow">LITTLE MOMENTS</span>
+          <h2>Memories worth keeping 📸</h2>
+          <p>Click any photo to see it up close.</p>
+        </div>
+
+        <div class="gallery">
+          <button class="polaroid" data-full="/pic/WhatsApp Image 2026-09-09 at 1.53.06 PM (1).jpeg" data-caption="Our Best Memory ❤️">
+            <span class="photo-wrap">
+              <img src="/pic/WhatsApp Image 2026-09-09 at 1.53.06 PM (1).jpeg" alt="Our best memory" loading="lazy">
+            </span>
+            <span class="photo-caption">Our Best Memory ❤️</span>
+          </button>
+
+          <button class="polaroid" data-full="pic/WhatsApp Image 2026-09-09 at 1.53.06 PM (2).jpeg" data-caption="Beautiful Smile 😊">
+            <span class="photo-wrap">
+              <img src="pic/WhatsApp Image 2026-09-09 at 1.53.06 PM (2).jpeg" alt="Beautiful smile" loading="lazy">
+            </span>
+            <span class="photo-caption">Beautiful Smile 😊</span>
+          </button>
+
+          <button class="polaroid" data-full="pic/WhatsApp Image 2026-09-09 at 1.53.06 PM.jpeg" data-caption="Happy Moments 🎉">
+            <span class="photo-wrap">
+              <img src="pic/WhatsApp Image 2026-09-09 at 1.53.06 PM.jpeg" alt="Happy moments" loading="lazy">
+            </span>
+            <span class="photo-caption">Happy Moments 🎉</span>
+          </button>
+
+          <button class="polaroid" data-full="pic/WhatsApp Image 2026-09-09 at 1.54.30 PM.jpeg" data-caption="Forever Together 💖">
+            <span class="photo-wrap">
+              <img src="pic/WhatsApp Image 2026-09-09 at 1.54.30 PM.jpeg" alt="Forever together" loading="lazy">
+            </span>
+            <span class="photo-caption">Forever Together 💖</span>
+          </button>
+        </div>
+
+        <button class="secondary-btn" id="celebrate">✨ Celebrate again</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Effects -->
+  <canvas id="fireworks"></canvas>
+  <canvas id="confetti"></canvas>
+  <div id="sparkles" aria-hidden="true"></div>
+
+  <!-- Music control -->
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle music" title="Toggle music">
+    🔇
+  </button>
+  <audio id="music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Photo lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="closeLightbox" class="lightbox-close" aria-label="Close photo">×</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImage" src="" alt="">
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <footer>Made with ❤️ just for you.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
